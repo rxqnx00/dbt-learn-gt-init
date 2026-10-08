@@ -1,14 +1,20 @@
-Welcome to your new dbt project!
+# dbt_fundamentals
 
-### Using the starter project
+My project for following along with the [dbt Learn](https://learn.getdbt.com/) Fundamentals course, using the Jaffle Shop dataset and DuckDB.
 
-Try running the following commands:
-- dbt build
+## What's here
 
+- `models/stg_jaffle_shop__customers.sql`: staging model for customers
+- `models/stg_jaffle_shop__orders.sql`: staging model for orders
+- `models/customers.sql`: customer-level model built from the staging models
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](http://slack.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Running it
+
+```bash
+pip install dbt-core dbt-duckdb
+dbt run
+```
+
+## Notes
+
+This is a learning project, not production code.
