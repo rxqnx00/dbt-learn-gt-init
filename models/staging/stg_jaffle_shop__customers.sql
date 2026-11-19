@@ -6,8 +6,6 @@
 select
         id as customer_id,
         first_name,
-        last_name
+        last_name,
 
-    from {{ ref('raw_customers') }}
-    -- The raw_customers table is a raw data source that contains information about customer orders.
-    -- In this case, the raw_customers table is not presented in this repository, but it is assumed to exist in the data warehouse.
+    from {{source('jaffle_shop', 'customers')}}
