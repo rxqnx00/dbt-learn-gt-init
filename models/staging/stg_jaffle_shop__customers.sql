@@ -4,8 +4,8 @@
 -- changing data types, and filtering out unnecessary data.
 
 select
-        id as customer_id,
-        first_name,
-        last_name,
+    id as customer_id,
+    first_name,
+    last_name
 
-    from {{source('jaffle_shop', 'customers')}}
+from {{ source('jaffle_shop', 'customers') }}
